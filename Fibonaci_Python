@@ -1,0 +1,23 @@
+def verifica_fibonacci(numero):
+    # Inicializa a sequência de Fibonacci com os dois primeiros números
+    fibonacci = [0, 1]
+
+    # Calcula os próximos números da sequência até alcançar ou ultrapassar o número fornecido
+    while fibonacci[-1] < numero:
+        next_number = fibonacci[-1] + fibonacci[-2]
+        fibonacci.append(next_number)
+
+    # Verifica se o número está na sequência de Fibonacci
+    if numero in fibonacci:
+        return True
+    else:
+        return False
+
+# Solicita ao usuário para inserir um número
+numero = int(input("Digite um número para verificar se pertence à sequência de Fibonacci: "))
+
+# Verifica se o número pertence à sequência de Fibonacci e imprime a mensagem correspondente
+if verifica_fibonacci(numero):
+    print(f'O número {numero} pertence à sequência de Fibonacci.')
+else:
+    print(f'O número {numero} não pertence à sequência de Fibonacci.')
