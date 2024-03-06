@@ -51,7 +51,7 @@ media_mensal = soma / len(valores)
 # Calculando o número de dias em que o faturamento foi superior à média mensal
 dias_acima_da_media = sum(1 for valor in valores if valor > media_mensal)
 
-# Exibindo os resultados
+# Resultados
 print("Menor valor de faturamento:", menor_valor)
 print("Maior valor de faturamento:", maior_valor)
 print("Número de dias com faturamento acima da média mensal:", dias_acima_da_media)
